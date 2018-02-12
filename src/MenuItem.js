@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types'
-import './menu.css'
 
 class MenuItem extends Component {
 
@@ -33,9 +32,7 @@ class MenuItem extends Component {
   render() {
     const { onClick, to } = this.props;
 
-    const ElementType = (to || to === '')
-    ? 'a'
-    : 'div'
+    const ElementType = to ? 'a' : 'div'
 
     return (
       <ElementType

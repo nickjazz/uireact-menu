@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import {isObject, values, get} from 'lodash';
 import MenuItem from './MenuItem'
 import MenuSub from './MenuSub'
-import './menu.css'
+import MenuLabel from './MenuLabel'
+// import './menu.css'
+// import './theme.scss'
 
 class Menu extends Component {
 
@@ -21,6 +23,7 @@ class Menu extends Component {
 
   static Item = MenuItem
   static Sub = MenuSub
+  static Label = MenuLabel
 
   static defaultProps = {
     direction: 'vertical'
@@ -51,7 +54,7 @@ class Menu extends Component {
             to={ hasChild ? null : (e.href || e.to)}
             key={i}
           >
-            <span>{get(e, 'title')}</span>
+            <MenuLabel>{get(e, 'title')}</MenuLabel>
 
             { hasChild &&
               <MenuSub>
