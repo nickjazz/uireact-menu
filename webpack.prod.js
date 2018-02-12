@@ -1,6 +1,10 @@
 const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+const extractCore = new ExtractTextPlugin('uireact-menu.css');
+const extractTheme = new ExtractTextPlugin('theme.css');
 
 module.exports = {
   entry: './src/index.js',
@@ -20,8 +24,18 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+         test:/\.css$/,
+         use: extractCore.extract({
+          fallback: "style-loader",
+          use: "css-loader"
+        })
+      },
+      {
+         test:/\.scss$/,
+         use: extractTheme.extract({
+          fallback: "style-loader",
+          use: "css-loader"
+        })
       }
     ]
   },
@@ -47,6 +61,8 @@ module.exports = {
       reportFilename: './reports-index.html',
       openAnalyzer: true
     }),
-    new UglifyJsPlugin()
+    new UglifyJsPlugin(),
+    extractCore,
+    extractTheme
   ]
 };
