@@ -6,59 +6,37 @@ html {
 }
 
 .uireact-menu {
-  width: 100%;
   display: flex;
+  height: 100%;
   position: relative;
   flex-direction: column;
-  border-right: 1px solid #ccc;
-}
-.uireact-menu.vertical {
-  border-bottom: 1px solid #ccc;
+  font-family: inherit;
 }
 .uireact-menu.horizontal {
   flex-direction: row;
 }
 .uireact-menu-item {
-  flex: 1;
-  padding: .2em .5em;
+  padding: .8em .8em;
   display: block;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
   position: relative;
-  border-left: 1px solid #ccc;
-  border-top: 1px solid #ccc;
-  background: #fff;
-}
-.uireact-menu-item.has-child:after{
-  position: absolute;
-  right: .5em;
-  top: calc(50% - .2em);
-  content: '';
-  width: 0;
-  height: 0;
-  border-top: .2em solid transparent;
-  border-bottom: .2em solid transparent;
-  border-left: .4em solid #111;
 }
 .uireact-menu.horizontal > .uireact-menu-item {
   margin-left: -1px;
-  border-bottom: 1px solid #ccc;
+  flex: 1;
 }
-.horizontal .uireact-menu-item.has-child:after{
-  transform: rotate(90deg);
-}
-.horizontal .uireact-menu-sub .uireact-menu-item.has-child:after{
-  transform: rotate(0deg);
+.uireact-menu-sub {
+  border: 1px solid #ccc;
+  display: none;
+  background: #fff;
 }
 .uireact-menu-item > .uireact-menu-sub {
   position: absolute;
   width: 100%;
   right: -100%;
   top: -1px;
-  border-bottom: 1px solid #ccc;
-  display: none;
-  background: #fff;
   z-index: 1;
 }
 .horizontal .uireact-menu-item > .uireact-menu-sub {
@@ -77,6 +55,21 @@ html {
 .uireact-menu-hover > .uireact-menu-sub {
   display: block
 }
-.uireact-menu-sub .uireact-menu-item {
-  border-right: 1px solid #ccc;
+.uireact-menu-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* arrow */
+.has-child .uireact-menu-icon:after{
+  content: ">";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+}
+/* only first level */
+.horizontal > .has-child > .uireact-menu-label > .uireact-menu-icon:after {
+  content: 'v'
 }
