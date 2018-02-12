@@ -41,34 +41,26 @@ const menuArray = [{
 storiesOf('Menu', module)
   .add('Basic usage', () => {
     return (
-      <div style={{width: '30vw'}}>
+      <div style={{width: '30vw', height: '100vh'}}>
         <Menu>
-          <Menu.Item to='http://google.com'>item 1</Menu.Item>
-          <Menu.Item>item 2</Menu.Item>
-          <Menu.Item>item 3</Menu.Item>
-          <Menu.Item>item 4</Menu.Item>
-          <Menu.Item>item 5</Menu.Item>
+          <Menu.Item>Home</Menu.Item>
+          <Menu.Item>Photos</Menu.Item>
+          <Menu.Item>Message</Menu.Item>
+          <Menu.Item>Music</Menu.Item>
+          <Menu.Item>Video </Menu.Item>
         </Menu>
       </div>
     )
   })
   .add('Direction usage', () => {
     return (
-      <div style={{width: '60vw'}}>
+      <div style={{width: '100vw'}}>
         <Menu direction='horizontal'>
-          <Menu.Item to='http://google.com'>horizontal item 1</Menu.Item>
-          <Menu.Item>item 2</Menu.Item>
-          <Menu.Item>item 3</Menu.Item>
-          <Menu.Item>item 4</Menu.Item>
-          <Menu.Item>item 5</Menu.Item>
-        </Menu>
-        <br />
-        <Menu direction='vertical'>
-            <Menu.Item to='http://google.com'>vertical item 1</Menu.Item>
-          <Menu.Item>item 2</Menu.Item>
-          <Menu.Item>item 3</Menu.Item>
-          <Menu.Item>item 4</Menu.Item>
-          <Menu.Item>item 5</Menu.Item>
+          <Menu.Item>Home</Menu.Item>
+          <Menu.Item>Photos</Menu.Item>
+          <Menu.Item>Message</Menu.Item>
+          <Menu.Item>Music</Menu.Item>
+          <Menu.Item>Video </Menu.Item>
         </Menu>
       </div>
     )
@@ -78,18 +70,18 @@ storiesOf('Menu', module)
       <div style={{width: '80vw'}}>
         <div style={{width: '30vw'}}>
           <Menu>
-            <Menu.Item to='http://google.com'>item 1</Menu.Item>
+            <Menu.Item>Home</Menu.Item>
             <Menu.Item>
-              item 2
+              <Menu.Label>Photos</Menu.Label>
               <Menu.Sub >
                 <Menu.Item>item 2-1</Menu.Item>
                 <Menu.Item>item 2-2</Menu.Item>
                 <Menu.Item>
-                  item 2-3
+                  <Menu.Label>item 2-3</Menu.Label>
                   <Menu.Sub>
                     <Menu.Item>item 2-3-1</Menu.Item>
                     <Menu.Item>
-                      item 2-3-1
+                      <Menu.Label>item 2-3-1</Menu.Label>
                       <Menu.Sub>
                         <Menu.Item>item 2-3-1-1</Menu.Item>
                         <Menu.Item>item 2-3-1-2</Menu.Item>
@@ -102,16 +94,16 @@ storiesOf('Menu', module)
               </Menu.Sub>
             </Menu.Item>
             <Menu.Item>
-              item 2
+              <Menu.Label>Message</Menu.Label>
               <Menu.Sub >
                 <Menu.Item>item 2-1</Menu.Item>
                 <Menu.Item>item 2-2</Menu.Item>
                 <Menu.Item>
-                  item 2-3
+                  <Menu.Label>item 2-3</Menu.Label>
                   <Menu.Sub>
                     <Menu.Item>item 2-3-1</Menu.Item>
                     <Menu.Item>
-                      item 2-3-1
+                      <Menu.Label>item 2-3-1</Menu.Label>
                       <Menu.Sub>
                         <Menu.Item>item 2-3-1-1</Menu.Item>
                         <Menu.Item>item 2-3-1-2</Menu.Item>
@@ -123,10 +115,10 @@ storiesOf('Menu', module)
                 </Menu.Item>
               </Menu.Sub>
             </Menu.Item>
-            <Menu.Item>item 3</Menu.Item>
-            <Menu.Item>item 4</Menu.Item>
-            <Menu.Item>item 5</Menu.Item>
-            <Menu.Item>item 6</Menu.Item>
+            <Menu.Item>Music</Menu.Item>
+            <Menu.Item>Contact</Menu.Item>
+            <Menu.Item>Favorite</Menu.Item>
+            <Menu.Item>Follow</Menu.Item>
           </Menu>
         </div>
 
@@ -135,16 +127,16 @@ storiesOf('Menu', module)
         <Menu direction='horizontal'>
           <Menu.Item to='http://google.com'>item 1</Menu.Item>
           <Menu.Item>
-            item 2
+            <Menu.Label>Photos</Menu.Label>
             <Menu.Sub>
               <Menu.Item>item 2-1</Menu.Item>
               <Menu.Item>item 2-2</Menu.Item>
               <Menu.Item>
-                item 2-3
+                <Menu.Label>Message</Menu.Label>
                 <Menu.Sub>
                   <Menu.Item>item 2-3-1</Menu.Item>
                   <Menu.Item>
-                    item 2-3-1
+                    <Menu.Label>Video</Menu.Label>
                     <Menu.Sub>
                       <Menu.Item>item 2-3-1-1</Menu.Item>
                       <Menu.Item>item 2-3-1-2</Menu.Item>
