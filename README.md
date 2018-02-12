@@ -1,10 +1,16 @@
 # UiReact - React menu
 React reusable multilevel menu component
 
+![Screenshot](Screenshot.gif)
+
+## Demo in Storybook
+
 ## Getting Started
   1. Add uireact-menu `npm install uireact-menu --save`
-  2. Enjoy !
+  2. import core css `import 'uireact-menu/build/uireact-menu.css'`
+  3. import theme css `import 'uireact-menu/build/theme.css'`
 ## Usage
+
 ##### Static data
 Import menu to your project
 ```javascript
@@ -25,19 +31,19 @@ import Menu from 'uireact-menu'
 import React, { Component } from 'react';
 import Menu from 'uireact-menu'
 
-<Menu direction='horizontal'>
-  <Menu.Item to='http://google.com'>item 1</Menu.Item>
+<Menu>
+  <Menu.Item>Home</Menu.Item>
   <Menu.Item>
-    item 2
-    <Menu.Sub>
+    <Menu.Label>Photos</Menu.Label>
+    <Menu.Sub >
       <Menu.Item>item 2-1</Menu.Item>
       <Menu.Item>item 2-2</Menu.Item>
       <Menu.Item>
-        item 2-3
+        <Menu.Label>item 2-3</Menu.Label>
         <Menu.Sub>
           <Menu.Item>item 2-3-1</Menu.Item>
           <Menu.Item>
-            item 2-3-1
+            <Menu.Label>item 2-3-1</Menu.Label>
             <Menu.Sub>
               <Menu.Item>item 2-3-1-1</Menu.Item>
               <Menu.Item>item 2-3-1-2</Menu.Item>
@@ -49,10 +55,32 @@ import Menu from 'uireact-menu'
       </Menu.Item>
     </Menu.Sub>
   </Menu.Item>
-  <Menu.Item>item 3</Menu.Item>
-  <Menu.Item>item 4</Menu.Item>
-  <Menu.Item>item 5</Menu.Item>
-  <Menu.Item>item 6</Menu.Item>
+  <Menu.Item>
+    <Menu.Label>Message</Menu.Label>
+    <Menu.Sub >
+      <Menu.Item>item 2-1</Menu.Item>
+      <Menu.Item>item 2-2</Menu.Item>
+      <Menu.Item>
+        <Menu.Label>item 2-3</Menu.Label>
+        <Menu.Sub>
+          <Menu.Item>item 2-3-1</Menu.Item>
+          <Menu.Item>
+            <Menu.Label>item 2-3-1</Menu.Label>
+            <Menu.Sub>
+              <Menu.Item>item 2-3-1-1</Menu.Item>
+              <Menu.Item>item 2-3-1-2</Menu.Item>
+              <Menu.Item>item 2-3-1-3</Menu.Item>
+            </Menu.Sub>
+          </Menu.Item>
+          <Menu.Item>item 2-3-2</Menu.Item>
+        </Menu.Sub>
+      </Menu.Item>
+    </Menu.Sub>
+  </Menu.Item>
+  <Menu.Item>Music</Menu.Item>
+  <Menu.Item>Contact</Menu.Item>
+  <Menu.Item>Favorite</Menu.Item>
+  <Menu.Item>Follow</Menu.Item>
 </Menu>
 ```
 ##### import data from json
@@ -117,7 +145,6 @@ After menu was add, it will have the following props:
 | ------------- |:-------------:| -----:| -----:|
 | onClick      | function |  | Menu item click event |
 | to      | string      |   | url or link  |
-
 
 License
 ----
