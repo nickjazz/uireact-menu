@@ -4,6 +4,7 @@ React reusable multilevel menu component
 ![Screenshot](https://raw.githubusercontent.com/nickjazz/uireact-menu/master/Screenshot.gif)
 
 ## Demo in Storybook
+[a link](https://nickjazz.github.io/uireact-menu/)
 
 ## Getting Started
   1. Add uireact-menu `npm install uireact-menu --save`
