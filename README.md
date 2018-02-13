@@ -1,7 +1,7 @@
 # UiReact - React menu
 React reusable multilevel menu component
 
-![Screenshot](Screenshot.gif)
+![Screenshot](https://raw.githubusercontent.com/nickjazz/uireact-menu/master/Screenshot.gif)
 
 ## Demo in Storybook
 
