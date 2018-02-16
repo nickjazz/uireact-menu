@@ -34,7 +34,7 @@ module.exports = {
          test:/\.scss$/,
          use: extractTheme.extract({
           fallback: "style-loader",
-          use: "css-loader"
+          use: "sass-loader"
         })
       }
     ]

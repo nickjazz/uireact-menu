@@ -4,7 +4,8 @@
   "description": "UIReact - React menu component",
   "main": "build/index.js",
   "peerDependencies": {
-    "react": "16.2.0"
+    "react": "16.2.0",
+    "react-dom": "16.2.0"
   },
   "homepage": "https://github.com/nickjazz/uireact-menu",
   "url" : "https://github.com/nickjazz/uireact-menu/issues",
@@ -16,11 +17,23 @@
     "webpack": "3.11.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "start": "webpack --watch --hot --config=webpack.config.js",
     "build": "NODE_ENV=production webpack --config=webpack.prod.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "setupTestFrameworkScriptFile": "<rootDir>config/setupTests.js",
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|scss)$": "identity-obj-proxy"
+    }
   },
   "author": {
     "name": "Kim Wong",
@@ -30,6 +43,7 @@
     "@storybook/react": "^3.3.13",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
+    "babel-jest": "^22.2.2",
     "babel-loader": "^7.0.0",
     "babel-plugin-lodash": "^3.3.2",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
@@ -42,7 +56,12 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.9",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
     "extract-text-webpack-plugin": "^3.0.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^22.3.0",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.1",

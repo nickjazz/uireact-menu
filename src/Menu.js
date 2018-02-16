@@ -4,9 +4,10 @@ import {isObject, values, get} from 'lodash';
 import MenuItem from './MenuItem'
 import MenuSub from './MenuSub'
 import MenuLabel from './MenuLabel'
-// import './menu.css'
-// import './theme.scss'
+import './menu.css'
+import './theme.scss'
 
+let i = 0
 class Menu extends Component {
 
   static propTypes = {
@@ -35,9 +36,31 @@ class Menu extends Component {
     const { data } = this.props;
     if (data && isObject(data)) {
       this.jsonData = values(data)
-    } else if (data) {
-      this.jsonData = data
     }
+  }
+
+  renderMenu = (menu) => {
+    const submenu = get(menu, ['submenu'])
+    return(
+      <MenuItem
+        // ignore link if have submenu
+        to={ submenu ? null : (menu.href || menu.to)}
+        key={i++}
+      >
+        <MenuLabel>{get(menu, 'title')}</MenuLabel>
+
+        { submenu &&
+          <MenuSub>
+            {
+              submenu.map(sub => {
+                return this.renderMenu(sub)
+              })
+            }
+
+          </MenuSub>
+        }
+      </MenuItem>
+    )
   }
 
   render() {
@@ -47,27 +70,7 @@ class Menu extends Component {
 
     if (this.jsonData)
       jsonDataChild = this.jsonData.map((e, i) => {
-        const hasChild =  get(e, 'submenu')
-        return(
-          <MenuItem
-            // ignore link if have submenu
-            to={ hasChild ? null : (e.href || e.to)}
-            key={i}
-          >
-            <MenuLabel>{get(e, 'title')}</MenuLabel>
-
-            { hasChild &&
-              <MenuSub>
-                <MenuItem
-                  to={e.href || e.to}
-                  key={i}
-                >
-                  <span>{get(e, 'title')}</span>
-                </MenuItem>
-              </MenuSub>
-            }
-          </MenuItem>
-        )
+        return this.renderMenu(e)
       })
 
     const enhanceChild = data

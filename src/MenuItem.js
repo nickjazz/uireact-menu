@@ -9,7 +9,6 @@ class MenuItem extends Component {
     to: PropTypes.string
   }
 
-  last = -1
   timeout = null
 
   onMouseEnter = () => {
@@ -17,15 +16,15 @@ class MenuItem extends Component {
     // remove sibling class
     if (el) {
       let allChild = Array.from(el)
-      allChild.map(e => e.classList.remove('uireact-menu-hover'))
+      allChild.map(e => e.classList.remove('uireact-menu-active'))
     }
     clearTimeout(this.timeout)
-    this.el.classList.add('uireact-menu-hover')
+    this.el.classList.add('uireact-menu-active')
   }
 
   onMouseLeave = () => {
     this.timeout = setTimeout(() => {
-      this.el.classList.remove('uireact-menu-hover')
+      this.el.classList.remove('uireact-menu-active')
     }, 550)
   }
 
