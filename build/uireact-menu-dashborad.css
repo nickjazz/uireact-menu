@@ -1,0 +1,40 @@
+@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);.dashborad-menu {
+  background: #455b74; }
+  .dashborad-menu .uireact-menu-item {
+    color: #fff;
+    font-weight: 600;
+    padding: 1.2em 1em; }
+  .dashborad-menu .uireact-menu-hover {
+    color: #F4D03F; }
+  .dashborad-menu .uireact-menu-sub {
+    position: relative;
+    left: 0;
+    background: #4f6783;
+    border: none;
+    margin: 1em -1em -1.2em -1em;
+    width: calc(100% + 2em); }
+    .dashborad-menu .uireact-menu-sub .uireact-menu-item {
+      color: #bcc2d1; }
+      .dashborad-menu .uireact-menu-sub .uireact-menu-item:hover {
+        color: inherit; }
+    .dashborad-menu .uireact-menu-sub .uireact-menu-sub {
+      position: absolute;
+      left: auto;
+      right: -100%;
+      background: #4f6783;
+      border: none;
+      margin: 0;
+      width: 100%;
+      border: 1px solid #455b74; }
+  .dashborad-menu .uireact-menu-click > .uireact-menu-sub {
+    display: block; }
+
+/* arrow */
+.has-child > .uireact-menu-label > .uireact-menu-icon:after {
+  font-family: "Ionicons";
+  font-size: 10px;
+  content: "\F125"; }
+
+/* only first level */
+.horizontal > .has-child > .uireact-menu-label > .uireact-menu-icon:after {
+  content: "\F123"; }

@@ -9,7 +9,13 @@ React reusable multilevel menu component
 ## Getting Started
   1. Add uireact-menu `npm install uireact-menu --save`
   2. import core css `import 'uireact-menu/build/uireact-menu.css'`
-  3. import theme css `import 'uireact-menu/build/theme.css'`
+  3. import theme css `import 'uireact-menu/build/your-custom-theme.css'`
+
+## Theme
+1. uireact-menu-light.css: Default theme
+2. uireact-menu-dashborad.css: Admin dashborad style menu
+3. more...
+
 ## Usage
 
 ##### Static data
@@ -18,7 +24,7 @@ Import menu to your project
 import React, { Component } from 'react';
 import Menu from 'uireact-menu'
 
-<Menu>
+<Menu containerClass="my-class">
   <Menu.Item>item 1</Menu.Item>
   <Menu.Item>item 2</Menu.Item>
   <Menu.Item>item 3</Menu.Item>
@@ -32,7 +38,7 @@ import Menu from 'uireact-menu'
 import React, { Component } from 'react';
 import Menu from 'uireact-menu'
 
-<Menu>
+<Menu containerClass="my-class">
   <Menu.Item>Home</Menu.Item>
   <Menu.Item>
     <Menu.Label>Photos</Menu.Label>
@@ -43,36 +49,6 @@ import Menu from 'uireact-menu'
         <Menu.Label>item 2-3</Menu.Label>
         <Menu.Sub>
           <Menu.Item>item 2-3-1</Menu.Item>
-          <Menu.Item>
-            <Menu.Label>item 2-3-1</Menu.Label>
-            <Menu.Sub>
-              <Menu.Item>item 2-3-1-1</Menu.Item>
-              <Menu.Item>item 2-3-1-2</Menu.Item>
-              <Menu.Item>item 2-3-1-3</Menu.Item>
-            </Menu.Sub>
-          </Menu.Item>
-          <Menu.Item>item 2-3-2</Menu.Item>
-        </Menu.Sub>
-      </Menu.Item>
-    </Menu.Sub>
-  </Menu.Item>
-  <Menu.Item>
-    <Menu.Label>Message</Menu.Label>
-    <Menu.Sub >
-      <Menu.Item>item 2-1</Menu.Item>
-      <Menu.Item>item 2-2</Menu.Item>
-      <Menu.Item>
-        <Menu.Label>item 2-3</Menu.Label>
-        <Menu.Sub>
-          <Menu.Item>item 2-3-1</Menu.Item>
-          <Menu.Item>
-            <Menu.Label>item 2-3-1</Menu.Label>
-            <Menu.Sub>
-              <Menu.Item>item 2-3-1-1</Menu.Item>
-              <Menu.Item>item 2-3-1-2</Menu.Item>
-              <Menu.Item>item 2-3-1-3</Menu.Item>
-            </Menu.Sub>
-          </Menu.Item>
           <Menu.Item>item 2-3-2</Menu.Item>
         </Menu.Sub>
       </Menu.Item>
@@ -139,7 +115,8 @@ After menu was add, it will have the following props:
 | Name        | Type           | Default  | Description |
 | ------------- |:-------------:| -----:| -----:|
 | data      | object or array |  | import json data or static menu data |
-| direction      | 'horizontal' or 'vertical'      |  'vertical' | menu direction |
+| direction      | 'horizontal' or 'vertical'      |  'vertical' | menu direction|
+| containerClass | string  | 'lightmenu' | add your custom menu className |
 
 #### <Menu.Item>
 | Name        | Type           | Default  | Description |

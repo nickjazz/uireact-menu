@@ -4,7 +4,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const extractCore = new ExtractTextPlugin('uireact-menu.css');
-const extractTheme = new ExtractTextPlugin('theme.css');
+const extractTheme = new ExtractTextPlugin('uireact-menu-dashborad.css');
 
 module.exports = {
   entry: './src/index.js',
@@ -33,8 +33,8 @@ module.exports = {
       {
          test:/\.scss$/,
          use: extractTheme.extract({
-          fallback: "style-loader",
-          use: "sass-loader"
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader']
         })
       }
     ]
@@ -56,11 +56,11 @@ module.exports = {
     },
   },
   plugins: [
-    new BundleAnalyzerPlugin({
-      analyzerMode: 'static',
-      reportFilename: './reports-index.html',
-      openAnalyzer: true
-    }),
+    // new BundleAnalyzerPlugin({
+    //   analyzerMode: 'static',
+    //   reportFilename: './reports-index.html',
+    //   openAnalyzer: true
+    // }),
     new UglifyJsPlugin(),
     extractCore,
     extractTheme

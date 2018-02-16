@@ -31,8 +31,6 @@ html {
   border: 1px solid #ccc;
   display: none;
   background: #fff;
-}
-.uireact-menu-item > .uireact-menu-sub {
   position: absolute;
   width: 100%;
   right: -100%;
@@ -52,16 +50,13 @@ html {
 .horizontal .uireact-menu-item .uireact-menu-sub .uireact-menu-item {
   width: calc(100% + 1px);
 }
-.uireact-menu-hover > .uireact-menu-sub {
-  display: block
-}
 .uireact-menu-label {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 /* arrow */
-.has-child .uireact-menu-icon:after{
+.has-child > .uireact-menu-label > .uireact-menu-icon:after{
   content: ">";
   display: flex;
   align-items: center;
