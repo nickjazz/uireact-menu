@@ -17,7 +17,7 @@
 }
 
 /* arrow */
-.has-child .uireact-menu-icon:after{
+.has-child > .uireact-menu-label > .uireact-menu-icon:after{
   font-family: "Ionicons";
   font-size: 10px;
   content: "\f125";

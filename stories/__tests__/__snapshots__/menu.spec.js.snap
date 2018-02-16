@@ -1,0 +1,790 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu Basic usage 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+      "width": "30vw",
+    }
+  }
+>
+  <Menu
+    direction="vertical"
+  >
+    <MenuItem>
+      Home
+    </MenuItem>
+    <MenuItem>
+      Photos
+    </MenuItem>
+    <MenuItem>
+      Message
+    </MenuItem>
+    <MenuItem>
+      Music
+    </MenuItem>
+    <MenuItem>
+      Video 
+    </MenuItem>
+  </Menu>
+</div>
+`;
+
+exports[`Menu Direction usage 1`] = `
+<div
+  style={
+    Object {
+      "width": "100vw",
+    }
+  }
+>
+  <Menu
+    direction="horizontal"
+  >
+    <MenuItem>
+      Home
+    </MenuItem>
+    <MenuItem>
+      Photos
+    </MenuItem>
+    <MenuItem>
+      Message
+    </MenuItem>
+    <MenuItem>
+      Music
+    </MenuItem>
+    <MenuItem>
+      Video 
+    </MenuItem>
+  </Menu>
+</div>
+`;
+
+exports[`Menu Nested menu item 1`] = `
+<div
+  style={
+    Object {
+      "width": "80vw",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "width": "30vw",
+      }
+    }
+  >
+    <Menu
+      direction="vertical"
+    >
+      <MenuItem>
+        Home
+      </MenuItem>
+      <MenuItem>
+        <MenuLabel>
+          Photos
+        </MenuLabel>
+        <MenuSub>
+          <MenuItem>
+            item 2-1
+          </MenuItem>
+          <MenuItem>
+            item 2-2
+          </MenuItem>
+          <MenuItem>
+            <MenuLabel>
+              item 2-3
+            </MenuLabel>
+            <MenuSub>
+              <MenuItem>
+                item 2-3-1
+              </MenuItem>
+              <MenuItem>
+                <MenuLabel>
+                  item 2-3-1
+                </MenuLabel>
+                <MenuSub>
+                  <MenuItem>
+                    item 2-3-1-1
+                  </MenuItem>
+                  <MenuItem>
+                    item 2-3-1-2
+                  </MenuItem>
+                  <MenuItem>
+                    item 2-3-1-3
+                  </MenuItem>
+                </MenuSub>
+              </MenuItem>
+              <MenuItem>
+                item 2-3-2
+              </MenuItem>
+            </MenuSub>
+          </MenuItem>
+        </MenuSub>
+      </MenuItem>
+      <MenuItem>
+        <MenuLabel>
+          Message
+        </MenuLabel>
+        <MenuSub>
+          <MenuItem>
+            item 2-1
+          </MenuItem>
+          <MenuItem>
+            item 2-2
+          </MenuItem>
+          <MenuItem>
+            <MenuLabel>
+              item 2-3
+            </MenuLabel>
+            <MenuSub>
+              <MenuItem>
+                item 2-3-1
+              </MenuItem>
+              <MenuItem>
+                <MenuLabel>
+                  item 2-3-1
+                </MenuLabel>
+                <MenuSub>
+                  <MenuItem>
+                    item 2-3-1-1
+                  </MenuItem>
+                  <MenuItem>
+                    item 2-3-1-2
+                  </MenuItem>
+                  <MenuItem>
+                    item 2-3-1-3
+                  </MenuItem>
+                </MenuSub>
+              </MenuItem>
+              <MenuItem>
+                item 2-3-2
+              </MenuItem>
+            </MenuSub>
+          </MenuItem>
+        </MenuSub>
+      </MenuItem>
+      <MenuItem>
+        Music
+      </MenuItem>
+      <MenuItem>
+        Contact
+      </MenuItem>
+      <MenuItem>
+        Favorite
+      </MenuItem>
+      <MenuItem>
+        Follow
+      </MenuItem>
+    </Menu>
+  </div>
+  <br />
+  <Menu
+    direction="horizontal"
+  >
+    <MenuItem
+      to="http://google.com"
+    >
+      item 1
+    </MenuItem>
+    <MenuItem>
+      <MenuLabel>
+        Photos
+      </MenuLabel>
+      <MenuSub>
+        <MenuItem>
+          item 2-1
+        </MenuItem>
+        <MenuItem>
+          item 2-2
+        </MenuItem>
+        <MenuItem>
+          <MenuLabel>
+            Message
+          </MenuLabel>
+          <MenuSub>
+            <MenuItem>
+              item 2-3-1
+            </MenuItem>
+            <MenuItem>
+              <MenuLabel>
+                Video
+              </MenuLabel>
+              <MenuSub>
+                <MenuItem>
+                  item 2-3-1-1
+                </MenuItem>
+                <MenuItem>
+                  item 2-3-1-2
+                </MenuItem>
+                <MenuItem>
+                  item 2-3-1-3
+                </MenuItem>
+              </MenuSub>
+            </MenuItem>
+            <MenuItem>
+              item 2-3-2
+            </MenuItem>
+          </MenuSub>
+        </MenuItem>
+      </MenuSub>
+    </MenuItem>
+    <MenuItem>
+      item 3
+    </MenuItem>
+    <MenuItem>
+      item 4
+    </MenuItem>
+    <MenuItem>
+      item 5
+    </MenuItem>
+    <MenuItem>
+      item 6
+    </MenuItem>
+  </Menu>
+</div>
+`;
+
+exports[`Menu With json data 1`] = `
+<div
+  style={
+    Object {
+      "width": "30vw",
+    }
+  }
+>
+  <Menu
+    data={
+      Object {
+        "menu-0": Object {
+          "id": "menu-0",
+          "title": "Switzerland",
+        },
+        "menu-1": Object {
+          "id": "menu-1",
+          "title": "Canada",
+        },
+        "menu-10": Object {
+          "id": "menu-10",
+          "title": "Norway",
+        },
+        "menu-3": Object {
+          "id": "menu-3",
+          "title": "United Kingdom",
+        },
+        "menu-4": Object {
+          "id": "menu-4",
+          "title": "Japan",
+        },
+        "menu-5": Object {
+          "id": "menu-5",
+          "title": "Germany",
+        },
+        "menu-6": Object {
+          "id": "menu-6",
+          "title": "Sweden",
+        },
+        "menu-7": Object {
+          "id": "menu-7",
+          "title": "United States",
+        },
+        "menu-8": Object {
+          "id": "menu-8",
+          "title": "Australia",
+        },
+        "menu-9": Object {
+          "id": "menu-9",
+          "title": "France",
+        },
+      }
+    }
+    direction="vertical"
+  >
+    <nav
+      className="uireact-menu vertical"
+    >
+      <MenuItem
+        key="0"
+      >
+        <div
+          className="uireact-menu-item "
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <MenuLabel>
+            <span
+              className="uireact-menu-label"
+            >
+              Switzerland
+              <span
+                className="uireact-menu-icon"
+              />
+            </span>
+          </MenuLabel>
+        </div>
+      </MenuItem>
+      <MenuItem
+        key="1"
+      >
+        <div
+          className="uireact-menu-item "
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <MenuLabel>
+            <span
+              className="uireact-menu-label"
+            >
+              Canada
+              <span
+                className="uireact-menu-icon"
+              />
+            </span>
+          </MenuLabel>
+        </div>
+      </MenuItem>
+      <MenuItem
+        key="2"
+      >
+        <div
+          className="uireact-menu-item "
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <MenuLabel>
+            <span
+              className="uireact-menu-label"
+            >
+              United Kingdom
+              <span
+                className="uireact-menu-icon"
+              />
+            </span>
+          </MenuLabel>
+        </div>
+      </MenuItem>
+      <MenuItem
+        key="3"
+      >
+        <div
+          className="uireact-menu-item "
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <MenuLabel>
+            <span
+              className="uireact-menu-label"
+            >
+              Germany
+              <span
+                className="uireact-menu-icon"
+              />
+            </span>
+          </MenuLabel>
+        </div>
+      </MenuItem>
+      <MenuItem
+        key="4"
+      >
+        <div
+          className="uireact-menu-item "
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <MenuLabel>
+            <span
+              className="uireact-menu-label"
+            >
+              Japan
+              <span
+                className="uireact-menu-icon"
+              />
+            </span>
+          </MenuLabel>
+        </div>
+      </MenuItem>
+      <MenuItem
+        key="5"
+      >
+        <div
+          className="uireact-menu-item "
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <MenuLabel>
+            <span
+              className="uireact-menu-label"
+            >
+              Sweden
+              <span
+                className="uireact-menu-icon"
+              />
+            </span>
+          </MenuLabel>
+        </div>
+      </MenuItem>
+      <MenuItem
+        key="6"
+      >
+        <div
+          className="uireact-menu-item "
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <MenuLabel>
+            <span
+              className="uireact-menu-label"
+            >
+              United States
+              <span
+                className="uireact-menu-icon"
+              />
+            </span>
+          </MenuLabel>
+        </div>
+      </MenuItem>
+      <MenuItem
+        key="7"
+      >
+        <div
+          className="uireact-menu-item "
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <MenuLabel>
+            <span
+              className="uireact-menu-label"
+            >
+              Australia
+              <span
+                className="uireact-menu-icon"
+              />
+            </span>
+          </MenuLabel>
+        </div>
+      </MenuItem>
+      <MenuItem
+        key="8"
+      >
+        <div
+          className="uireact-menu-item "
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <MenuLabel>
+            <span
+              className="uireact-menu-label"
+            >
+              France
+              <span
+                className="uireact-menu-icon"
+              />
+            </span>
+          </MenuLabel>
+        </div>
+      </MenuItem>
+      <MenuItem
+        key="9"
+      >
+        <div
+          className="uireact-menu-item "
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <MenuLabel>
+            <span
+              className="uireact-menu-label"
+            >
+              Norway
+              <span
+                className="uireact-menu-icon"
+              />
+            </span>
+          </MenuLabel>
+        </div>
+      </MenuItem>
+    </nav>
+  </Menu>
+</div>
+`;
+
+exports[`Menu With json data 2`] = `
+<div
+  style={
+    Object {
+      "width": "30vw",
+    }
+  }
+>
+  <Menu
+    data={
+      Array [
+        Object {
+          "href": "google.com",
+          "submenu": Array [
+            Object {
+              "submenu": Array [
+                Object {
+                  "href": "#",
+                  "title": "Sub sub Menu1",
+                },
+                Object {
+                  "href": "#",
+                  "title": "Sub sub Menu2",
+                },
+              ],
+              "title": "Sub Menu1",
+            },
+            Object {
+              "href": "#",
+              "title": "Sub Menu2",
+            },
+            Object {
+              "href": "#",
+              "title": "Sub Menu3",
+            },
+          ],
+          "title": "Menu 1",
+        },
+        Object {
+          "submenu": Array [
+            Object {
+              "href": "#",
+              "title": "Sub Menu 2",
+            },
+          ],
+          "title": "Menu 2",
+        },
+        Object {
+          "href": "#",
+          "title": "Menu 3",
+        },
+      ]
+    }
+    direction="vertical"
+  >
+    <nav
+      className="uireact-menu vertical"
+    >
+      <MenuItem
+        key="10"
+        to={null}
+      >
+        <div
+          className="uireact-menu-item "
+          href={null}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <MenuLabel>
+            <span
+              className="uireact-menu-label"
+            >
+              Menu 1
+              <span
+                className="uireact-menu-icon"
+              />
+            </span>
+          </MenuLabel>
+          <MenuSub>
+            <div
+              className="uireact-menu-sub"
+            >
+              <MenuItem
+                key="11"
+                to={null}
+              >
+                <div
+                  className="uireact-menu-item "
+                  href={null}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                >
+                  <MenuLabel>
+                    <span
+                      className="uireact-menu-label"
+                    >
+                      Sub Menu1
+                      <span
+                        className="uireact-menu-icon"
+                      />
+                    </span>
+                  </MenuLabel>
+                  <MenuSub>
+                    <div
+                      className="uireact-menu-sub"
+                    >
+                      <MenuItem
+                        key="12"
+                        to="#"
+                      >
+                        <a
+                          className="uireact-menu-item "
+                          href="#"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          <MenuLabel>
+                            <span
+                              className="uireact-menu-label"
+                            >
+                              Sub sub Menu1
+                              <span
+                                className="uireact-menu-icon"
+                              />
+                            </span>
+                          </MenuLabel>
+                        </a>
+                      </MenuItem>
+                      <MenuItem
+                        key="13"
+                        to="#"
+                      >
+                        <a
+                          className="uireact-menu-item "
+                          href="#"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          <MenuLabel>
+                            <span
+                              className="uireact-menu-label"
+                            >
+                              Sub sub Menu2
+                              <span
+                                className="uireact-menu-icon"
+                              />
+                            </span>
+                          </MenuLabel>
+                        </a>
+                      </MenuItem>
+                    </div>
+                  </MenuSub>
+                </div>
+              </MenuItem>
+              <MenuItem
+                key="14"
+                to="#"
+              >
+                <a
+                  className="uireact-menu-item "
+                  href="#"
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                >
+                  <MenuLabel>
+                    <span
+                      className="uireact-menu-label"
+                    >
+                      Sub Menu2
+                      <span
+                        className="uireact-menu-icon"
+                      />
+                    </span>
+                  </MenuLabel>
+                </a>
+              </MenuItem>
+              <MenuItem
+                key="15"
+                to="#"
+              >
+                <a
+                  className="uireact-menu-item "
+                  href="#"
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                >
+                  <MenuLabel>
+                    <span
+                      className="uireact-menu-label"
+                    >
+                      Sub Menu3
+                      <span
+                        className="uireact-menu-icon"
+                      />
+                    </span>
+                  </MenuLabel>
+                </a>
+              </MenuItem>
+            </div>
+          </MenuSub>
+        </div>
+      </MenuItem>
+      <MenuItem
+        key="16"
+        to={null}
+      >
+        <div
+          className="uireact-menu-item "
+          href={null}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <MenuLabel>
+            <span
+              className="uireact-menu-label"
+            >
+              Menu 2
+              <span
+                className="uireact-menu-icon"
+              />
+            </span>
+          </MenuLabel>
+          <MenuSub>
+            <div
+              className="uireact-menu-sub"
+            >
+              <MenuItem
+                key="17"
+                to="#"
+              >
+                <a
+                  className="uireact-menu-item "
+                  href="#"
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                >
+                  <MenuLabel>
+                    <span
+                      className="uireact-menu-label"
+                    >
+                      Sub Menu 2
+                      <span
+                        className="uireact-menu-icon"
+                      />
+                    </span>
+                  </MenuLabel>
+                </a>
+              </MenuItem>
+            </div>
+          </MenuSub>
+        </div>
+      </MenuItem>
+      <MenuItem
+        key="18"
+        to="#"
+      >
+        <a
+          className="uireact-menu-item "
+          href="#"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <MenuLabel>
+            <span
+              className="uireact-menu-label"
+            >
+              Menu 3
+              <span
+                className="uireact-menu-icon"
+              />
+            </span>
+          </MenuLabel>
+        </a>
+      </MenuItem>
+    </nav>
+  </Menu>
+</div>
+`;

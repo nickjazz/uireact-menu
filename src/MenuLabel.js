@@ -2,28 +2,19 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types'
 
-class MenuLabel extends Component {
+const MenuLabel = ({ children }) => {
+  return (
+    <span className="uireact-menu-label">
+      {children}
 
-  static propTypes = {
-    children: PropTypes.string
-  }
-
-  componentDidMount() {
-    // add class to parent)
-  }
-
-  render() {
-    const { children } = this.props;
-
-    return (
-      <span className="uireact-menu-label">
-        {children}
-
-        <span className="uireact-menu-icon"></span>
-      </span>
-    );
-  }
-
+      <span className="uireact-menu-icon"></span>
+    </span>
+  )
 }
+
+MenuLabel.propTypes = {
+  children: PropTypes.string
+}
+
 
 export default MenuLabel;

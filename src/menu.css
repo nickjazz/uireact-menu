@@ -52,7 +52,7 @@ html {
 .horizontal .uireact-menu-item .uireact-menu-sub .uireact-menu-item {
   width: calc(100% + 1px);
 }
-.uireact-menu-hover > .uireact-menu-sub {
+.uireact-menu-active > .uireact-menu-sub {
   display: block
 }
 .uireact-menu-label {
@@ -61,7 +61,7 @@ html {
   justify-content: space-between;
 }
 /* arrow */
-.has-child .uireact-menu-icon:after{
+.has-child > .uireact-menu-label > .uireact-menu-icon:after{
   content: ">";
   display: flex;
   align-items: center;

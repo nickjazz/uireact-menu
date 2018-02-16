@@ -1,46 +1,42 @@
 import React from 'react';
+import { shallow, mount, render } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
 
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
-
-import Menu from '../src';
-
-const menuData = require('./menu.json')
-
+import Menu from '../../src';
+const menuData = require('../../stories/menu.json')
 const menuArray = [{
   'title': 'Menu 1',
   'href': 'google.com',
   'submenu': [{
-    'title': 'Sub Menu1',
-    'submenu': [{
-      'title': 'Sub sub Menu1',
+      'title': 'Sub Menu1',
+      'submenu': [{
+        'title': 'Sub sub Menu1',
+        'href': '#'
+      }, {
+        'title': 'Sub sub Menu2',
+        'href': '#'
+      }]
+    }, {
+      'title': 'Sub Menu2',
       'href': '#'
     }, {
-      'title': 'Sub sub Menu2',
+      'title': 'Sub Menu3',
       'href': '#'
     }]
   }, {
-    'title': 'Sub Menu2',
-    'href': '#'
+    'title': 'Menu 2',
+    'submenu': [{
+      'title': 'Sub Menu 2',
+      'href': '#'
+    }]
   }, {
-    'title': 'Sub Menu3',
+    'title': 'Menu 3',
     'href': '#'
-  }]
-}, {
-  'title': 'Menu 2',
-  'submenu': [{
-    'title': 'Sub Menu 2',
-    'href': '#'
-  }]
-}, {
-  'title': 'Menu 3',
-  'href': '#'
 }]
 
-storiesOf('Menu', module)
-  .add('Basic usage', () => {
-    return (
+describe('Menu', () => {
+  it('Basic usage', () => {
+    const output = shallow(
       <div style={{width: '30vw', height: '100vh'}}>
         <Menu>
           <Menu.Item>Home</Menu.Item>
@@ -50,25 +46,12 @@ storiesOf('Menu', module)
           <Menu.Item>Video </Menu.Item>
         </Menu>
       </div>
-    )
-  })
-  .add('Submenu', () => {
-    return (
-      <div style={{width: '30vw', height: '100vh'}}>
-        <Menu>
-          <Menu.Item>
-            <Menu.Label>Home</Menu.Label>
-            <Menu.Sub>
-              <Menu.Item>item 2-1</Menu.Item>
-              <Menu.Item>item 2-2</Menu.Item>
-            </Menu.Sub>
-          </Menu.Item>
-        </Menu>
-      </div>
-    )
-  })
-  .add('Direction usage', () => {
-    return (
+    );
+    expect(shallowToJson(output)).toMatchSnapshot();
+  });
+
+  it('Direction usage', () => {
+    const output = shallow(
       <div style={{width: '100vw'}}>
         <Menu direction='horizontal'>
           <Menu.Item>Home</Menu.Item>
@@ -78,10 +61,12 @@ storiesOf('Menu', module)
           <Menu.Item>Video </Menu.Item>
         </Menu>
       </div>
-    )
-  })
-  .add('Nested menu item', () => {
-    return (
+    );
+    expect(shallowToJson(output)).toMatchSnapshot();
+  });
+
+  it('Nested menu item', () => {
+    const output = shallow(
       <div style={{width: '80vw'}}>
         <div style={{width: '30vw'}}>
           <Menu>
@@ -169,19 +154,26 @@ storiesOf('Menu', module)
           <Menu.Item>item 6</Menu.Item>
         </Menu>
       </div>
-    )
-  })
-  .add('With json data', () => {
-    return (
+    );
+    expect(shallowToJson(output)).toMatchSnapshot();
+  });
+
+  it('With json data', () => {
+    const output = mount((
       <div style={{width: '30vw'}}>
         <Menu data={menuData} />
       </div>
-    )
-  })
-  .add('With array data', () => {
-    return (
+    ));
+    expect(shallowToJson(output)).toMatchSnapshot();
+  });
+
+  it('With json data', () => {
+    const output = mount((
       <div style={{width: '30vw'}}>
         <Menu data={menuArray} />
       </div>
-    )
-  })
+    ));
+    expect(shallowToJson(output)).toMatchSnapshot();
+  });
+
+});
