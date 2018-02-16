@@ -1,5 +1,211 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Menu Admin dashborad theme 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+      "width": "30vw",
+    }
+  }
+>
+  <Menu
+    containerClass="dashborad-menu"
+    direction="vertical"
+  >
+    <nav
+      className="uireact-menu vertical dashborad-menu"
+    >
+      <MenuItem>
+        <div
+          className="uireact-menu-item"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <MenuLabel>
+            <span
+              className="uireact-menu-label"
+            >
+              Home
+              <span
+                className="uireact-menu-icon"
+              />
+            </span>
+          </MenuLabel>
+          <MenuSub>
+            <div
+              className="uireact-menu-sub"
+            >
+              <MenuItem>
+                <div
+                  className="uireact-menu-item"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                >
+                  item 2-1
+                </div>
+              </MenuItem>
+              <MenuItem>
+                <div
+                  className="uireact-menu-item"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                >
+                  item 2-2
+                </div>
+              </MenuItem>
+              <MenuItem>
+                <div
+                  className="uireact-menu-item"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                >
+                  <MenuLabel>
+                    <span
+                      className="uireact-menu-label"
+                    >
+                      Message
+                      <span
+                        className="uireact-menu-icon"
+                      />
+                    </span>
+                  </MenuLabel>
+                  <MenuSub>
+                    <div
+                      className="uireact-menu-sub"
+                    >
+                      <MenuItem>
+                        <div
+                          className="uireact-menu-item"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          item 2-3-1
+                        </div>
+                      </MenuItem>
+                      <MenuItem>
+                        <div
+                          className="uireact-menu-item"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          <MenuLabel>
+                            <span
+                              className="uireact-menu-label"
+                            >
+                              Video
+                              <span
+                                className="uireact-menu-icon"
+                              />
+                            </span>
+                          </MenuLabel>
+                          <MenuSub>
+                            <div
+                              className="uireact-menu-sub"
+                            >
+                              <MenuItem>
+                                <div
+                                  className="uireact-menu-item"
+                                  onClick={[Function]}
+                                  onMouseEnter={[Function]}
+                                  onMouseLeave={[Function]}
+                                >
+                                  item 2-3-1-1
+                                </div>
+                              </MenuItem>
+                              <MenuItem>
+                                <div
+                                  className="uireact-menu-item"
+                                  onClick={[Function]}
+                                  onMouseEnter={[Function]}
+                                  onMouseLeave={[Function]}
+                                >
+                                  item 2-3-1-2
+                                </div>
+                              </MenuItem>
+                              <MenuItem>
+                                <div
+                                  className="uireact-menu-item"
+                                  onClick={[Function]}
+                                  onMouseEnter={[Function]}
+                                  onMouseLeave={[Function]}
+                                >
+                                  item 2-3-1-3
+                                </div>
+                              </MenuItem>
+                            </div>
+                          </MenuSub>
+                        </div>
+                      </MenuItem>
+                      <MenuItem>
+                        <div
+                          className="uireact-menu-item"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          item 2-3-2
+                        </div>
+                      </MenuItem>
+                    </div>
+                  </MenuSub>
+                </div>
+              </MenuItem>
+            </div>
+          </MenuSub>
+        </div>
+      </MenuItem>
+      <MenuItem>
+        <div
+          className="uireact-menu-item"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Photos
+        </div>
+      </MenuItem>
+      <MenuItem>
+        <div
+          className="uireact-menu-item"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Message
+        </div>
+      </MenuItem>
+      <MenuItem>
+        <div
+          className="uireact-menu-item"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Music
+        </div>
+      </MenuItem>
+      <MenuItem>
+        <div
+          className="uireact-menu-item"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Video 
+        </div>
+      </MenuItem>
+    </nav>
+  </Menu>
+</div>
+`;
+
 exports[`Menu Basic usage 1`] = `
 <div
   style={
@@ -10,6 +216,7 @@ exports[`Menu Basic usage 1`] = `
   }
 >
   <Menu
+    containerClass="lightmenu"
     direction="vertical"
   >
     <MenuItem>
@@ -40,6 +247,7 @@ exports[`Menu Direction usage 1`] = `
   }
 >
   <Menu
+    containerClass="lightmenu"
     direction="horizontal"
   >
     <MenuItem>
@@ -77,6 +285,7 @@ exports[`Menu Nested menu item 1`] = `
     }
   >
     <Menu
+      containerClass="lightmenu"
       direction="vertical"
     >
       <MenuItem>
@@ -182,6 +391,7 @@ exports[`Menu Nested menu item 1`] = `
   </div>
   <br />
   <Menu
+    containerClass="lightmenu"
     direction="horizontal"
   >
     <MenuItem
@@ -256,6 +466,7 @@ exports[`Menu With json data 1`] = `
   }
 >
   <Menu
+    containerClass="lightmenu"
     data={
       Object {
         "menu-0": Object {
@@ -303,13 +514,14 @@ exports[`Menu With json data 1`] = `
     direction="vertical"
   >
     <nav
-      className="uireact-menu vertical"
+      className="uireact-menu vertical lightmenu"
     >
       <MenuItem
         key="0"
       >
         <div
-          className="uireact-menu-item "
+          className="uireact-menu-item"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -329,7 +541,8 @@ exports[`Menu With json data 1`] = `
         key="1"
       >
         <div
-          className="uireact-menu-item "
+          className="uireact-menu-item"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -349,7 +562,8 @@ exports[`Menu With json data 1`] = `
         key="2"
       >
         <div
-          className="uireact-menu-item "
+          className="uireact-menu-item"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -369,7 +583,8 @@ exports[`Menu With json data 1`] = `
         key="3"
       >
         <div
-          className="uireact-menu-item "
+          className="uireact-menu-item"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -389,7 +604,8 @@ exports[`Menu With json data 1`] = `
         key="4"
       >
         <div
-          className="uireact-menu-item "
+          className="uireact-menu-item"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -409,7 +625,8 @@ exports[`Menu With json data 1`] = `
         key="5"
       >
         <div
-          className="uireact-menu-item "
+          className="uireact-menu-item"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -429,7 +646,8 @@ exports[`Menu With json data 1`] = `
         key="6"
       >
         <div
-          className="uireact-menu-item "
+          className="uireact-menu-item"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -449,7 +667,8 @@ exports[`Menu With json data 1`] = `
         key="7"
       >
         <div
-          className="uireact-menu-item "
+          className="uireact-menu-item"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -469,7 +688,8 @@ exports[`Menu With json data 1`] = `
         key="8"
       >
         <div
-          className="uireact-menu-item "
+          className="uireact-menu-item"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -489,7 +709,8 @@ exports[`Menu With json data 1`] = `
         key="9"
       >
         <div
-          className="uireact-menu-item "
+          className="uireact-menu-item"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -519,6 +740,7 @@ exports[`Menu With json data 2`] = `
   }
 >
   <Menu
+    containerClass="lightmenu"
     data={
       Array [
         Object {
@@ -566,15 +788,16 @@ exports[`Menu With json data 2`] = `
     direction="vertical"
   >
     <nav
-      className="uireact-menu vertical"
+      className="uireact-menu vertical lightmenu"
     >
       <MenuItem
         key="10"
         to={null}
       >
         <div
-          className="uireact-menu-item "
+          className="uireact-menu-item"
           href={null}
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -597,8 +820,9 @@ exports[`Menu With json data 2`] = `
                 to={null}
               >
                 <div
-                  className="uireact-menu-item "
+                  className="uireact-menu-item"
                   href={null}
+                  onClick={[Function]}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
                 >
@@ -621,8 +845,9 @@ exports[`Menu With json data 2`] = `
                         to="#"
                       >
                         <a
-                          className="uireact-menu-item "
+                          className="uireact-menu-item"
                           href="#"
+                          onClick={[Function]}
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                         >
@@ -643,8 +868,9 @@ exports[`Menu With json data 2`] = `
                         to="#"
                       >
                         <a
-                          className="uireact-menu-item "
+                          className="uireact-menu-item"
                           href="#"
+                          onClick={[Function]}
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                         >
@@ -669,8 +895,9 @@ exports[`Menu With json data 2`] = `
                 to="#"
               >
                 <a
-                  className="uireact-menu-item "
+                  className="uireact-menu-item"
                   href="#"
+                  onClick={[Function]}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
                 >
@@ -691,8 +918,9 @@ exports[`Menu With json data 2`] = `
                 to="#"
               >
                 <a
-                  className="uireact-menu-item "
+                  className="uireact-menu-item"
                   href="#"
+                  onClick={[Function]}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
                 >
@@ -717,8 +945,9 @@ exports[`Menu With json data 2`] = `
         to={null}
       >
         <div
-          className="uireact-menu-item "
+          className="uireact-menu-item"
           href={null}
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -741,8 +970,9 @@ exports[`Menu With json data 2`] = `
                 to="#"
               >
                 <a
-                  className="uireact-menu-item "
+                  className="uireact-menu-item"
                   href="#"
+                  onClick={[Function]}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
                 >
@@ -767,8 +997,9 @@ exports[`Menu With json data 2`] = `
         to="#"
       >
         <a
-          className="uireact-menu-item "
+          className="uireact-menu-item"
           href="#"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >

@@ -185,3 +185,37 @@ storiesOf('Menu', module)
       </div>
     )
   })
+  .add('(Theme) Admin dashborad', () => {
+    return (
+      <div style={{width: '30vw', height: '100vh'}}>
+        <Menu containerClass='dashborad-menu'>
+          <Menu.Item>
+            <Menu.Label>Home</Menu.Label>
+            <Menu.Sub>
+              <Menu.Item>item 2-1</Menu.Item>
+              <Menu.Item>item 2-2</Menu.Item>
+              <Menu.Item>
+                <Menu.Label>Message</Menu.Label>
+                <Menu.Sub>
+                  <Menu.Item>item 2-3-1</Menu.Item>
+                  <Menu.Item>
+                    <Menu.Label>Video</Menu.Label>
+                    <Menu.Sub>
+                      <Menu.Item>item 2-3-1-1</Menu.Item>
+                      <Menu.Item>item 2-3-1-2</Menu.Item>
+                      <Menu.Item>item 2-3-1-3</Menu.Item>
+                    </Menu.Sub>
+                  </Menu.Item>
+                  <Menu.Item>item 2-3-2</Menu.Item>
+                </Menu.Sub>
+              </Menu.Item>
+            </Menu.Sub>
+          </Menu.Item>
+          <Menu.Item>Photos</Menu.Item>
+          <Menu.Item>Message</Menu.Item>
+          <Menu.Item>Music</Menu.Item>
+          <Menu.Item>Video </Menu.Item>
+        </Menu>
+      </div>
+    )
+  })
