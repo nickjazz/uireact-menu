@@ -5,13 +5,15 @@ import MenuItem from './MenuItem'
 import MenuSub from './MenuSub'
 import MenuLabel from './MenuLabel'
 import './menu.css'
-import './theme.scss'
+import './dashborad.scss'
+import './lightmenu.scss'
 
 let i = 0
 class Menu extends Component {
 
   static propTypes = {
     children: PropTypes.any,
+    containerClass: PropTypes.string,
     data: PropTypes.oneOfType([
       PropTypes.object,
       PropTypes.array
@@ -27,7 +29,8 @@ class Menu extends Component {
   static Label = MenuLabel
 
   static defaultProps = {
-    direction: 'vertical'
+    direction: 'vertical',
+    containerClass: 'lightmenu'
   }
 
   jsonData = null
@@ -65,7 +68,7 @@ class Menu extends Component {
 
   render() {
 
-    const { children, data, direction} = this.props
+    const { children, data, direction, containerClass} = this.props
     let jsonDataChild
 
     if (this.jsonData)
@@ -78,7 +81,7 @@ class Menu extends Component {
     : children
 
     return (
-      <nav className={`uireact-menu ${direction}`}>
+      <nav className={`uireact-menu ${direction} ${containerClass}`}>
         {enhanceChild}
       </nav>
     );

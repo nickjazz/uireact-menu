@@ -50,6 +50,13 @@ describe('Menu', () => {
     expect(shallowToJson(output)).toMatchSnapshot();
   });
 
+  it('Add custom class', () => {
+    const wrapper = shallow(
+      <Menu containerClass="my-theme"/>
+    );
+    expect(wrapper.hasClass('my-theme')).toBe(true);
+  });
+
   it('Direction usage', () => {
     const output = shallow(
       <div style={{width: '100vw'}}>
@@ -171,6 +178,42 @@ describe('Menu', () => {
     const output = mount((
       <div style={{width: '30vw'}}>
         <Menu data={menuArray} />
+      </div>
+    ));
+    expect(shallowToJson(output)).toMatchSnapshot();
+  });
+
+  it('Admin dashborad theme', () => {
+    const output = mount((
+      <div style={{width: '30vw', height: '100vh'}}>
+        <Menu containerClass='dashborad-menu'>
+          <Menu.Item>
+            <Menu.Label>Home</Menu.Label>
+            <Menu.Sub>
+              <Menu.Item>item 2-1</Menu.Item>
+              <Menu.Item>item 2-2</Menu.Item>
+              <Menu.Item>
+                <Menu.Label>Message</Menu.Label>
+                <Menu.Sub>
+                  <Menu.Item>item 2-3-1</Menu.Item>
+                  <Menu.Item>
+                    <Menu.Label>Video</Menu.Label>
+                    <Menu.Sub>
+                      <Menu.Item>item 2-3-1-1</Menu.Item>
+                      <Menu.Item>item 2-3-1-2</Menu.Item>
+                      <Menu.Item>item 2-3-1-3</Menu.Item>
+                    </Menu.Sub>
+                  </Menu.Item>
+                  <Menu.Item>item 2-3-2</Menu.Item>
+                </Menu.Sub>
+              </Menu.Item>
+            </Menu.Sub>
+          </Menu.Item>
+          <Menu.Item>Photos</Menu.Item>
+          <Menu.Item>Message</Menu.Item>
+          <Menu.Item>Music</Menu.Item>
+          <Menu.Item>Video </Menu.Item>
+        </Menu>
       </div>
     ));
     expect(shallowToJson(output)).toMatchSnapshot();

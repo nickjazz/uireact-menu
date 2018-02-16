@@ -31,8 +31,6 @@ html {
   border: 1px solid #ccc;
   display: none;
   background: #fff;
-}
-.uireact-menu-item > .uireact-menu-sub {
   position: absolute;
   width: 100%;
   right: -100%;
@@ -51,9 +49,6 @@ html {
 }
 .horizontal .uireact-menu-item .uireact-menu-sub .uireact-menu-item {
   width: calc(100% + 1px);
-}
-.uireact-menu-active > .uireact-menu-sub {
-  display: block
 }
 .uireact-menu-label {
   display: flex;

@@ -1,0 +1,52 @@
+@import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+.dashborad-menu {
+  background: #455b74;
+
+  .uireact-menu-item  {
+    color: #fff;
+    font-weight: 600;
+    padding: 1.2em 1em;
+  }
+  .uireact-menu-hover {
+    color: #F4D03F;
+  }
+  .uireact-menu-sub {
+    position: relative;
+    left: 0;
+    background: #4f6783;
+    border: none;
+    margin: 1em -1em -1.2em -1em;
+    width: calc(100% + 2em);
+    .uireact-menu-item {
+      color: #bcc2d1;
+      &:hover {
+        color: inherit;
+      }
+    }
+    .uireact-menu-sub {
+      position: absolute;
+      left: auto;
+      right: -100%;
+      background: #4f6783;
+      border: none;
+      margin: 0;
+      width: 100%;
+      border: 1px solid #455b74;
+    }
+  }
+  .uireact-menu-click > .uireact-menu-sub {
+    display: block
+  }
+}
+
+
+/* arrow */
+.has-child > .uireact-menu-label > .uireact-menu-icon:after{
+  font-family: "Ionicons";
+  font-size: 10px;
+  content: "\f125";
+}
+/* only first level */
+.horizontal > .has-child > .uireact-menu-label > .uireact-menu-icon:after {
+  content: "\f123"
+}
