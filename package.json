@@ -1,6 +1,6 @@
 {
   "name": "uireact-menu",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "UIReact - React menu component",
   "main": "build/index.js",
   "peerDependencies": {
