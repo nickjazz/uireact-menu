@@ -5,7 +5,10 @@
   .uireact-menu-item  {
     color: #fff;
     font-weight: 600;
-    padding: 1.2em 1em;
+    &.has-child {
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
   .uireact-menu-hover {
     color: #F4D03F;
@@ -15,8 +18,6 @@
     left: 0;
     background: #4f6783;
     border: none;
-    margin: 1em -1em -1.2em -1em;
-    width: calc(100% + 2em);
     .uireact-menu-item {
       color: #bcc2d1;
       &:hover {

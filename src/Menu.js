@@ -4,11 +4,13 @@ import {isObject, values, get} from 'lodash';
 import MenuItem from './MenuItem'
 import MenuSub from './MenuSub'
 import MenuLabel from './MenuLabel'
-import './menu.css'
-import './dashborad.scss'
-import './lightmenu.scss'
+import MenuWrapper from './MenuWrapper'
+// import './menu.scss'
+// import './dashborad.scss'
+// import './lightmenu.scss'
 
 let i = 0
+
 class Menu extends Component {
 
   static propTypes = {
@@ -27,6 +29,7 @@ class Menu extends Component {
   static Item = MenuItem
   static Sub = MenuSub
   static Label = MenuLabel
+  static Wrapper = MenuWrapper
 
   static defaultProps = {
     direction: 'vertical',
@@ -51,7 +54,6 @@ class Menu extends Component {
         key={i++}
       >
         <MenuLabel>{get(menu, 'title')}</MenuLabel>
-
         { submenu &&
           <MenuSub>
             {
@@ -65,6 +67,7 @@ class Menu extends Component {
       </MenuItem>
     )
   }
+
 
   render() {
 
@@ -88,5 +91,6 @@ class Menu extends Component {
   }
 
 }
+
 
 export default Menu;

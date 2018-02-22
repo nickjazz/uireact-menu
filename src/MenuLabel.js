@@ -6,14 +6,16 @@ const MenuLabel = ({ children }) => {
   return (
     <span className="uireact-menu-label">
       {children}
-
       <span className="uireact-menu-icon"></span>
     </span>
   )
 }
 
 MenuLabel.propTypes = {
-  children: PropTypes.string
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object
+  ])
 }
 
 

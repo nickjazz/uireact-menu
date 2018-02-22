@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -11,22 +12,46 @@ html {
   position: relative;
   flex-direction: column;
   font-family: inherit;
+  box-sizing: border-box;
+  &.horizontal {
+    flex-direction: row;
+  }
 }
-.uireact-menu.horizontal {
-  flex-direction: row;
-}
+
 .uireact-menu-item {
-  padding: .8em .8em;
-  display: block;
+  display: flex;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
   position: relative;
+  align-items: center;
+  width: 100%;
+  a {
+    color: inherit;
+    text-decoration: none;
+    flex: 1;
+  }
 }
-.uireact-menu.horizontal > .uireact-menu-item {
+
+.horizontal .uireact-menu-item {
   margin-left: -1px;
   flex: 1;
+  > .uireact-menu-sub {
+    right: 0;
+    top: 100%;
+    left: -1px;
+    .uireact-menu-sub {
+      left: auto;
+      right: -100%;
+      top: -1px;
+    }
+  }
+
+  .uireact-menu-sub .uireact-menu-item {
+    width: calc(100% + 1px);
+  }
 }
+
 .uireact-menu-sub {
   border: 1px solid #ccc;
   display: none;
@@ -37,24 +62,20 @@ html {
   top: -1px;
   z-index: 1;
 }
-.horizontal .uireact-menu-item > .uireact-menu-sub {
-  right: 0;
-  top: 100%;
-  left: -1px;
-}
-.horizontal .uireact-menu-item > .uireact-menu-sub .uireact-menu-sub {
-  left: auto;
-  right: -100%;
-  top: -1px;
-}
-.horizontal .uireact-menu-item .uireact-menu-sub .uireact-menu-item {
-  width: calc(100% + 1px);
-}
+
+
 .uireact-menu-label {
+  padding: .8em .8em;
   display: flex;
+  flex: 1;
   align-items: center;
   justify-content: space-between;
 }
+
+.uireact-menu-icon {
+  padding: 0 .8em;
+}
+
 /* arrow */
 .has-child > .uireact-menu-label > .uireact-menu-icon:after{
   content: ">";
