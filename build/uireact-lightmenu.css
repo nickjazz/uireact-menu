@@ -1,0 +1,21 @@
+.lightmenu {
+  background: #fff;
+  /* arrow */
+  /* only first level */ }
+  .lightmenu .uireact-menu-item {
+    color: #6d777f;
+    font-weight: 600; }
+  .lightmenu .uireact-menu-hover {
+    color: #F5B041; }
+  .lightmenu .uireact-menu-sub {
+    border: 1px solid #f3f3f3;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 3px; }
+  .lightmenu .uireact-menu-hover > .uireact-menu-sub {
+    display: block; }
+  .lightmenu .has-child > .uireact-menu-label > .uireact-menu-icon:after {
+    font-family: "Ionicons";
+    font-size: 10px;
+    content: "\F125"; }
+  .lightmenu.horizontal > .has-child > .uireact-menu-label > .uireact-menu-icon:after {
+    content: "\F123"; }

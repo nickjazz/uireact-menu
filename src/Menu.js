@@ -5,9 +5,9 @@ import MenuItem from './MenuItem'
 import MenuSub from './MenuSub'
 import MenuLabel from './MenuLabel'
 import MenuWrapper from './MenuWrapper'
-import './menu.scss'
-import './dashborad.scss'
-import './lightmenu.scss'
+// import './menu.scss'
+// import './dashborad.scss'
+// import './lightmenu.scss'
 
 let i = 0
 
