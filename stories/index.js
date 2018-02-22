@@ -36,6 +36,12 @@ const menuArray = [{
 }, {
   'title': 'Menu 3',
   'href': '#'
+},{
+  'title': 'Menu 4',
+  'href': '#'
+},{
+  'title': 'Menu 5',
+  'href': '#'
 }]
 
 storiesOf('Menu', module)
@@ -43,11 +49,11 @@ storiesOf('Menu', module)
     return (
       <div style={{width: '30vw', height: '100vh'}}>
         <Menu>
-          <Menu.Item>Home</Menu.Item>
-          <Menu.Item>Photos</Menu.Item>
-          <Menu.Item>Message</Menu.Item>
-          <Menu.Item>Music</Menu.Item>
-          <Menu.Item>Video </Menu.Item>
+          <Menu.Item onClick={action('click')}>Home</Menu.Item>
+          <Menu.Item onClick={action('click')}>Photos</Menu.Item>
+          <Menu.Item onClick={action('click')}>Message</Menu.Item>
+          <Menu.Item onClick={action('click')}>Music</Menu.Item>
+          <Menu.Item onClick={action('click')}>Video </Menu.Item>
         </Menu>
       </div>
     )
@@ -110,7 +116,7 @@ storiesOf('Menu', module)
             </Menu.Item>
             <Menu.Item>
               <Menu.Label>Message</Menu.Label>
-              <Menu.Sub >
+              <Menu.Sub>
                 <Menu.Item>item 2-1</Menu.Item>
                 <Menu.Item>item 2-2</Menu.Item>
                 <Menu.Item>

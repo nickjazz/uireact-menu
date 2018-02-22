@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types'
+import { isArray } from 'lodash'
+import Menu from './Menu'
 
 const hoverClassName = 'uireact-menu-hover'
 const clickClassName = 'uireact-menu-click'
@@ -11,6 +13,10 @@ class MenuItem extends Component {
   static propTypes = {
     onClick: PropTypes.func,
     to: PropTypes.string
+  }
+
+  static defaultProps = {
+    onClick: () => {}
   }
 
   timeout = null
@@ -43,6 +49,8 @@ class MenuItem extends Component {
 
     // if click on submenu
     this.addClass(clickClassName)
+
+    this.props.onClick()
     e.stopPropagation()
   }
 
@@ -60,9 +68,15 @@ class MenuItem extends Component {
   }
 
   render() {
-    const { to } = this.props;
-
+    const { to, children} = this.props;
     const ElementType = to ? 'a' : 'div'
+    let enhanceChild
+
+    if (isArray(children)) {
+      enhanceChild = children
+    } else {
+      enhanceChild = <Menu.Label>{children}</Menu.Label>
+    }
 
     return (
       <ElementType
@@ -73,7 +87,7 @@ class MenuItem extends Component {
         onMouseLeave={this.onMouseLeave}
         href={to}
       >
-        {this.props.children}
+        {enhanceChild}
       </ElementType>
     );
   }
